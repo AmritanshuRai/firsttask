@@ -1,9 +1,19 @@
+import { useState } from "react";
 import "./homepage.styles.scss";
 
 const Homepage = () => {
+  const [letters, setLetters] = useState("");
+  const handleInputChange = (e) => {
+    setLetters(e.target.value);
+  };
   return (
     <main>
-      <input type="text" placeholder="Type your string" />
+      <input
+        type="text"
+        onChange={handleInputChange}
+        value={letters}
+        placeholder="Type Your String"
+      />
       <div className="homepage__container">
         <div className="homepage__box">Box1</div>
         <div className="homepage__box">Box2</div>
