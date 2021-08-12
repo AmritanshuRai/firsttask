@@ -1,0 +1,17 @@
+main {
+  min-height: 95vh;
+}
+.homepage__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.homepage__box {
+  display: flex;
+  flex: 0 1 32%;
+  min-height: 40vh;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
