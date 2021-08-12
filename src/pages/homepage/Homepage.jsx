@@ -15,7 +15,7 @@ const Homepage = () => {
     <main>
       <section style={{ width: isOpen ? "20%" : "1%" }} className="sidenav">
         <span onClick={handleClose} className="close">
-          -
+          {isOpen ? "-" : "+"}
         </span>
         <div>{isOpen && "Sidenav"}</div>
       </section>
@@ -25,6 +25,7 @@ const Homepage = () => {
           onChange={handleInputChange}
           value={letters}
           placeholder="Type Your String"
+          className="homepage__input"
         />
         <div className="homepage__container">
           {[...letters].map((char, i) => (
