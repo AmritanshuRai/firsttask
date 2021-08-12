@@ -1,10 +1,13 @@
 header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--neutral-700);
   font-weight: bold;
-  border-bottom: 1px solid var(--neutral-400);
   height: 5vh;
   letter-spacing: 0.8px;
+  background-color: var(--neutral-300);
 }
