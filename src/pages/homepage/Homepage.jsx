@@ -1,15 +1,26 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { getRandomColor } from "./homepage.utils";
 import "./homepage.styles.scss";
 
 const Homepage = () => {
   const [letters, setLetters] = useState("");
   const [isOpen, setIsOpen] = useState(true);
+  const prevColor = useRef();
+
   const handleInputChange = (e) => {
     setLetters(e.target.value);
   };
   const handleClose = () => {
     setIsOpen((prev) => !prev);
+  };
+  const getColor = () => {
+    const color = getRandomColor();
+    if (prevColor.current === color) {
+      getColor();
+    } else {
+      prevColor.current = color;
+      return color;
+    }
   };
   return (
     <main>
@@ -32,7 +43,7 @@ const Homepage = () => {
             <div
               key={i}
               style={{
-                borderColor: (i + 1) % 3 === 0 && getRandomColor(),
+                borderColor: (i + 1) % 3 === 0 && getColor(),
               }}
               className="homepage__box"
             >
