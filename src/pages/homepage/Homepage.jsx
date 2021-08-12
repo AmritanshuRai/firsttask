@@ -3,7 +3,7 @@ import { getRandomColor } from "./homepage.utils";
 import "./homepage.styles.scss";
 
 const Homepage = () => {
-  const [letters, setLetters] = useState("");
+  const [letters, setLetters] = useState("react");
   const [isOpen, setIsOpen] = useState(true);
   const prevColor = useRef();
 
