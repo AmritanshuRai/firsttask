@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { getRandomColor } from "./homepage.utils";
 import "./homepage.styles.scss";
 
 const Homepage = () => {
@@ -20,15 +21,17 @@ const Homepage = () => {
           placeholder="Type Your String"
         />
         <div className="homepage__container">
-          <div className="homepage__box">Box1</div>
-          <div className="homepage__box">Box2</div>
-          <div className="homepage__box">Box3</div>
-          <div className="homepage__box">Box4</div>
-          <div className="homepage__box">Box5</div>
-          <div className="homepage__box">Box6</div>
-          <div className="homepage__box">Box7</div>
-          <div className="homepage__box">Box8</div>
-          <div className="homepage__box">Box9</div>
+          {[...letters].map((char, i) => (
+            <div
+              key={i}
+              style={{
+                borderColor: (i + 1) % 3 === 0 && getRandomColor(),
+              }}
+              className="homepage__box"
+            >
+              {char}
+            </div>
+          ))}
         </div>
       </section>
     </main>

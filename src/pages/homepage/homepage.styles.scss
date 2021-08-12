@@ -43,6 +43,8 @@ main {
   width: 10rem;
   height: 10rem;
   margin: 2rem 2rem 0 0;
-  border: 1px solid var(--neutral-400);
+  border: 2px solid var(--neutral-400);
+  text-transform: capitalize;
+  font-size: var(--header4);
   @include center;
 }
