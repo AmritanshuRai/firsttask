@@ -1,11 +1,11 @@
-import { useState, useRef } from "react";
-import { getRandomColor } from "./homepage.utils";
+import { useState } from "react";
+import Box from "../../components/box/Box";
+
 import "./homepage.styles.scss";
 
 const Homepage = () => {
   const [letters, setLetters] = useState("react");
   const [isOpen, setIsOpen] = useState(true);
-  const prevColor = useRef();
 
   const handleInputChange = (e) => {
     setLetters(e.target.value);
@@ -13,15 +13,7 @@ const Homepage = () => {
   const handleClose = () => {
     setIsOpen((prev) => !prev);
   };
-  const getColor = () => {
-    const color = getRandomColor();
-    if (prevColor.current === color) {
-      getColor();
-    } else {
-      prevColor.current = color;
-      return color;
-    }
-  };
+
   return (
     <main>
       <section style={{ width: isOpen ? "20%" : "1%" }} className="sidenav">
@@ -38,19 +30,7 @@ const Homepage = () => {
           placeholder="Type Your String"
           className="homepage__input"
         />
-        <div className="homepage__container">
-          {[...letters].map((char, i) => (
-            <div
-              key={i}
-              style={{
-                borderColor: (i + 1) % 3 === 0 && getColor(),
-              }}
-              className="homepage__box"
-            >
-              {char}
-            </div>
-          ))}
-        </div>
+        <Box letters={letters} />
       </section>
     </main>
   );

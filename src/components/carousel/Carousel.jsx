@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { PrevButton, NextButton } from "./CarouselButtons";
 import { useEmblaCarousel as useCarousel } from "embla-carousel/react";
-import { useHistory } from "react-router-dom";
 
 import "./carousel.styles.css";
 
