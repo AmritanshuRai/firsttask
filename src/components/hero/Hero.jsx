@@ -2,7 +2,7 @@ import Carousel from "../carousel/Carousel";
 
 import { v4 as uuidv4 } from "uuid";
 const Hero = () => {
-  const slides = [1, 2, 3, 4, 5].map((name) => {
+  const slides = [1, 2, 3, 4, 5, 6].map((name) => {
     return {
       images: [`/img/${name}.jpg`],
       title: name,

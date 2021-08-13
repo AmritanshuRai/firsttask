@@ -33,7 +33,7 @@ const Carousel = ({ config, slides }) => {
                         {config?.key === "hero" && (
                           <>
                             <h2 className="carousel__slide__heading">
-                              Buy Premium
+                              Premium Wallpapers
                             </h2>
                           </>
                         )}

@@ -67,6 +67,8 @@
 
 .carousel__slide__heading {
   font-size: 8rem;
+  mix-blend-mode: difference;
+  text-shadow: 0 3px 1px orange;
 }
 @media (max-width: 786px) {
   .carousel__slide__heading {
