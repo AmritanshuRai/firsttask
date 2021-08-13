@@ -41,7 +41,7 @@ main {
   background-color: var(--neutral-200);
   border: 1px solid var(--neutral-400);
   padding: 0.5rem 1rem;
-  width: 20vw;
+  width: clamp(15rem, 30%, 20rem);
   margin: 1rem 0;
   letter-spacing: 1px;
   color: var(--neutral-500);
