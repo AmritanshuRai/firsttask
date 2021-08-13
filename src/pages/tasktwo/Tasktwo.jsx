@@ -6,8 +6,10 @@ const Tasktwo = () => {
     <section className="tasktwo">
       <Hero />
       <div className="tasktwo__para">
-        <h1>Long paragrapgh to make page scrollable</h1>
-        <p>
+        <h1 className="tasktwo__title">
+          Long paragrapgh to make page scrollable
+        </h1>
+        <p className="tasktwo__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et
           fringilla turpis. Ut purus nibh, commodo a metus at, sagittis dictum
           dolor. Orci varius natoque penatibus et magnis dis parturient montes,
