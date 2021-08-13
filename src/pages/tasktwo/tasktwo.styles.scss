@@ -1,0 +1,17 @@
+.tasktwo {
+  &__para {
+    width: 50%;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+  &__embed {
+    height: 200px;
+    width: 200px;
+    position: sticky;
+    bottom: 0;
+    margin-left: auto;
+    iframe {
+      border: none;
+    }
+  }
+}
