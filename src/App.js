@@ -12,7 +12,8 @@ function App() {
   return (
     <Router>
       <Header />
-      <Route path='/' component={Tasktwo} exact />
+      <Route path='/tasktwo' component={Tasktwo} />
+      <Route path='/' component={Homepage} exact />
     </Router>
   );
 }

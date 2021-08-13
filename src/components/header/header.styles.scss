@@ -10,4 +10,9 @@ header {
   height: 5vh;
   letter-spacing: 0.8px;
   background-color: var(--neutral-300);
+  h4 {
+    text-transform: capitalize;
+    color: var(--neutral-600);
+    margin-right: 2rem;
+  }
 }
